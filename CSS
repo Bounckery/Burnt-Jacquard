@@ -383,7 +383,7 @@ p.kudos {
 }
 
 #footer.region {
-  border-top: 5px solid #d6caa5;
+  border-top: 5px solid #000;
   background: url("https://64.media.tumblr.com/39ecbe9ccf694623b2b7229caa0396ab/1f46552f68f72b42-9e/s1280x1920/93efe69de6808c1a758ca9fe6ce8adbe8bbf9436.png");
   background-size: contain;
   background-position-x: right;
@@ -535,6 +535,12 @@ fieldset.warnings {
 .dynamic form {
   border-width: 2;
   border-color: #ddca9f;
+}
+
+#dashboard,
+#dashboard.own {
+  border-bottom: 10px solid #000;
+  border-top: 10px solid #000;
 }
 
 .dashboard .own {
