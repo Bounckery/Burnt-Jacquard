@@ -190,7 +190,6 @@ html body .home .primary.header.module .icon a::after {
   background-size: contain !important;
   filter: none !important;
   -webkit-filter: none !important;
-  z-index: 2 !important;
 }
 
 .splash .module h3 {
