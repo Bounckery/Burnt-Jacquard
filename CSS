@@ -1,10 +1,10 @@
-#greeting img.icon {
-  display: none;
+#outer,
+.javascript {
+  background: #000;
 }
 
-.comment div.icon {
-  box-shadow: none !important;
-  border: 2px solid #ddca9f;
+#greeting img.icon {
+  display: none;
 }
 
 #outer,
@@ -28,44 +28,19 @@ input[type="password"],
 input[type="email"],
 textarea,
 select {
-  background: rgba(0, 0, 0, 0.2);
+  background: rgba(0, 0, 0, 0.3);
   color: #d6caa5;
   border: 1px solid #000;
 }
 
 textarea {
-  background-color: rgba(0, 0, 0, 0.2);
+  background-color: rgba(0, 0, 0, 0.3);
 }
 
 #header {
-  background: rgba(0, 0, 0, 0.5);
-}
-
-#header {
-  position: relative;
-  z-index: 0;
-}
-
-#header::after {
-  content: "";
-  position: absolute;
-  top: 20px;
-  right: 20px;
-  width: 450px;
-  height: 450px;
-  background: url("https://64.media.tumblr.com/39ecbe9ccf694623b2b7229caa0396ab/1f46552f68f72b42-9e/s1280x1920/93efe69de6808c1a758ca9fe6ce8adbe8bbf9436.png")
-    no-repeat center;
-  background-position-x: right;
-  background-position-y: top;
-  background-size: contain;
-  z-index: -1;
-}
-
-#header .heading,
-#header .menu,
-#greeting {
-  position: relative;
-  z-index: 1;
+  background: url("https://64.media.tumblr.com/800d2a2eabc4a8f28ac4014501975994/7972e22074a54812-49/s1280x1920/d7beda87669a05b37851cf917917757dc641fa4c.png");
+  background-size: cover;
+  background-position: right;
 }
 
 #header .logo,
@@ -79,17 +54,13 @@ textarea {
 
 #header h1.heading a::before {
   display: inline-block;
-  width: 284px;
-  height: 159px;
+  width: 324px;
+  height: 189px;
   content: " ";
   background-image: url("https://64.media.tumblr.com/db7879891afdd5083b08eb952c8d003c/501ce1f026b59b77-c9/s1280x1920/de39995369f08199b31e41ad6c102632ff018a36.png");
-  background-size: 284px 159px;
+  background-size: 324px 189px;
   margin-left: 1em;
-  margin-top: 0.5em;
-}
-
-#header {
-  background-size: contain;
+  margin-top: 0em;
   background-repeat: no-repeat;
 }
 
@@ -99,11 +70,22 @@ textarea {
 
 #header .primary {
   background: url("https://64.media.tumblr.com/999aac485f9031c0c4b8253e0720db48/7c7c62d43e69e1bf-53/s250x400/aff461a75bf0ea9a892b4368b7650e30f1dc3be7.png");
-  box-shadow: none;
 }
 
 #greeting .menu {
   width: 12em !important;
+}
+
+#greeting li.dropdown {
+  position: relative;
+}
+
+#greeting li.dropdown ul.menu {
+  position: absolute;
+  top: 100%;
+  right: 0;
+  left: auto;
+  z-index: 1000;
 }
 
 #header .menu {
@@ -119,6 +101,11 @@ textarea {
   color: #ddca9f;
   font-variant: small-caps;
   font-weight: bold;
+}
+
+#header .menu {
+  box-shadow: 5px 5px 19px 0px rgba(0, 0, 0, 0.82);
+  border: 1px solid #000;
 }
 
 #footer a,
@@ -193,9 +180,13 @@ html body .home .primary.header.module .icon a::after {
 }
 
 .splash .module h3 {
-  border-bottom: 1px solid #c8c8c8;
+  border-bottom: 1px solid #a89a86;
   color: #dcd1b2;
   font-size: 1.714em;
+}
+
+.splash .news li {
+  border-bottom: 1px solid #000;
 }
 
 .splash .news blockquote p:first-child {
@@ -220,6 +211,11 @@ html body .home .primary.header.module .icon a::after {
   background: rgba(0, 0, 0, 0.5);
 }
 
+.comment div.icon {
+  box-shadow: none !important;
+  border: 1px solid #ddca9f;
+}
+
 .comment .userstuff {
   padding-right: 67px;
   padding-bottom: 50px;
@@ -233,7 +229,12 @@ html body .home .primary.header.module .icon a::after {
 li.comment {
   background: transparent;
   border: 15px solid transparent;
-  border-image: url("https://64.media.tumblr.com/c8bc1367c4e14051ca6bcd7a06feeceb/d263b8ed2fd636f7-b4/s2048x3072/7bb0951573053dcf077469ae5d803413129c2226.png") 30 round;
+  border-image: url("https://64.media.tumblr.com/c636967746433dc703e0e2d2f108e3bc/ce6cb52a880304be-ea/s400x600/45fa1840c0179efbe6cb2797d125c96ab1ebecd9.png") 20 round;
+  margin-top: 2em;
+}
+
+div.comment {
+  border: none;
 }
 
 .thread .even {
@@ -251,9 +252,11 @@ ul.notes,
 .alert.flash,
 .LV_invalid {
   border: 10px solid transparent;
-  border-image: url("https://64.media.tumblr.com/4a80d217efbcdea857d884177c5bcf4d/a2a882572698f5fa-da/s75x75_c1/cb69fa634185fe4f765db78c163629dc93743fc2.png") 30 stretch;
+  border-image: url("https://64.media.tumblr.com/4a80d217efbcdea857d884177c5bcf4d/a2a882572698f5fa-da/s75x75_c1/cb69fa634185fe4f765db78c163629dc93743fc2.png") 20 stretch;
   background: rgba(0, 0, 0, .30);
   box-shadow: none;
+  padding: 0.3em !important;
+  margin: 1em !important;
 }
 
 .notice,
@@ -359,8 +362,9 @@ li.blurb .summary p:first-child:first-letter {
 }
 
 #workskin {
-  border: 50px solid transparent;
-  border-image: url("https://64.media.tumblr.com/1bac181250fb43409e32ada7d2b71bdd/53c8f9b3ba9ca289-9d/s1280x1920/b817d6f9aac81b78af8bfcbf49ac5fdccaba8c8a.png") 25% round;
+  border: 30px solid transparent;
+  border-image: url("https://64.media.tumblr.com/1bac181250fb43409e32ada7d2b71bdd/53c8f9b3ba9ca289-9d/s1280x1920/b817d6f9aac81b78af8bfcbf49ac5fdccaba8c8a.png") 10% round;
+  padding: 0.5em;
 }
 
 div.preface {
@@ -371,18 +375,25 @@ div.preface {
 dl.meta {
   margin-top: 2em;
   margin-bottom: 3em;
+  border: 1px solid #000;
+  padding: 0.5em;
+  background: url("https://64.media.tumblr.com/e14c27d5914c8ac5e724b8b44597aa9e/99ac942a0471f85b-7a/s1280x1920/439a8211d0ecefa6536b9f51b0c63de92fde09a0.png");
+  background-position-x: right;
+  background-position-y: top;
+  background-size: 40%;
+  background-repeat: no-repeat;
 }
 
 p.kudos {
   padding-left: 8.3em;
   background: url("https://64.media.tumblr.com/7ed91ebe51f466ec760ed0f4af0a615e/f545b16454839a2d-10/s1280x1920/8954b700ecfdd14dcae3dcfc2699005ab79f74dd.png");
-  background-size: 100px 112px;
+  background-size: 100px 108px;
   background-repeat: no-repeat;
-  min-height: 112px;
+  min-height: 108px;
 }
 
 #footer.region {
-  border-top: 5px solid #000;
+  border-top: 3px solid #000;
   background: url("https://64.media.tumblr.com/39ecbe9ccf694623b2b7229caa0396ab/1f46552f68f72b42-9e/s1280x1920/93efe69de6808c1a758ca9fe6ce8adbe8bbf9436.png");
   background-size: contain;
   background-position-x: right;
@@ -392,10 +403,12 @@ p.kudos {
 
 .splash .favorite li:nth-of-type(even) a {
   background: linear-gradient(180deg,rgba(31, 22, 7, 1) 0%, rgba(57, 41, 19, 1) 100%);
+  border: 1px solid #000;
 }
 
 .splash .favorite li:nth-of-type(odd) a {
   background: linear-gradient(180deg,rgba(37, 24, 13, 1) 0%, rgba(0, 0, 0, 1) 100%);
+  border: 1px solid #000;
 }
 
 .picture .header {
@@ -434,22 +447,6 @@ form blockquote.userstuff {
 
 .admin .primary .icon {
   display: none;
-}
-
-fieldset,
-fieldset fieldset {
-  background-image: url("https://64.media.tumblr.com/88e129ee7cf62304e9310a10c63b552d/8ca0c6990a76aad7-8a/s1280x1920/1f5cd7fe7b8d6dbffd0593161d85d447450477d7.jpg");
-  background-repeat: repeat-y;
-}
-
-fieldset,
-form dl,
-fieldset dl dl,
-fieldset fieldset fieldset,
-fieldset fieldset dl dl,
-dd.hideme,
-form blockquote.userstuff {
-  padding: 0em;
 }
 
 fieldset.warnings {
@@ -495,8 +492,8 @@ fieldset.warnings {
 }
 
 .media-index .listbox {
-  background: url("https://64.media.tumblr.com/5d6f556424e503649f2074ff5083612e/6a33c0b8f451a419-31/s400x600/3208e30fd95655db57e9203d7dc9f9bfcab9b0b9.jpg");
-  background-size: 30%;
+  background: url("https://64.media.tumblr.com/442a0e0b58144d0facb4842a2e435ad7/5d41b2f69d053594-c1/s1280x1920/082af4101230977c3bbae51d366a88ae95777fc5.png");
+  background-size: 60%;
   border: 2px solid #000;
   box-shadow: none;
 }
@@ -516,18 +513,9 @@ fieldset.warnings {
   background-repeat: no-repeat;
 }
 
-.wrapper {
-  box-shadow: none;
-}
-
-.works-show.region div.wrapper {
-  border: 1px #ddca9f;
-  box-shadow: none;
-  background: url("https://64.media.tumblr.com/e14c27d5914c8ac5e724b8b44597aa9e/99ac942a0471f85b-7a/s1280x1920/439a8211d0ecefa6536b9f51b0c63de92fde09a0.png");
-  background-position-x: right;
-  background-position-y: top;
-  background-size: 30%;
-  background-repeat: no-repeat;
+.wrapper:has(> table,
+> .meta) {
+  box-shadow: 5px 5px 19px 0px rgba(0, 0, 0, 0.82);
 }
 
 .toggled form,
@@ -582,12 +570,9 @@ li.blurb {
 
 .listbox,
 fieldset fieldset.listbox {
-  clear: right;
   background-color: rgba(0, 0, 0, 0.25);
   border: 1.5px solid #000;
-  padding: 0;
-  margin: 0.643em auto;
-  overflow: hidden;
+  box-shadow: 0 0 0 1px #000;
 }
 
 .users-show.dashboard.region .listbox > .heading,
@@ -799,9 +784,9 @@ body,
 
 fieldset,
 fieldset fieldset {
-  background-color: rgba(0, 0, 0, 0.1);
-  border: 4px solid #000;
-  box-shadow: none !important;
+  background-color: transparent;
+  border: 1px solid #000;
+  box-shadow: 5px 5px 20px 0px rgba(0, 0, 0, 0.92);
 }
 
 input,
@@ -903,7 +888,7 @@ dd.required {
 }
 
 form dt {
-  border-bottom: 1px solid #000;
+  border-bottom: 2px solid #000;
 }
 
 .tox-tinymce {
@@ -1025,6 +1010,53 @@ a.tag:hover,
   color: #c8b79c;
 }
 
+.faq .categories h3 {
+  border-bottom: 0.25em double #000;
+}
+
+.work.navigation .download,
+.javascript .work.navigation .download .secondary {
+  background: #000;
+  border: 1px solid #000;
+  box-shadow: 2px 2px 5px #000;
+}
+
+.secondary {
+  background: rgba(0 0 0 0.7);
+  border: 1px solid #000;
+  box-shadow: 2px 2px 5px #000;
+}
+
+form.search input[type="text"] {
+  border-top-color: #000;
+}
+
+span.unread,
+.replied,
+span.claimed,
+.actions span.defaulted {
+  background: linear-gradient(180deg, rgba(31, 22, 7, 1) 0%, rgba(57, 41, 19, 1) 100%);
+  border: 1px solid #000;
+  color: #ddca9f;
+}
+
+span.offered,
+.replied,
+.nominations .approved {
+  color: #ddca9f;
+}
+
+#dashboard .secondary {
+  background: #000;
+  box-shadow: inset 2px 2px 5px #000;
+}
+
+.dynamic form {
+  background: url("https://64.media.tumblr.com/88e129ee7cf62304e9310a10c63b552d/8ca0c6990a76aad7-8a/s1280x1920/1f5cd7fe7b8d6dbffd0593161d85d447450477d7.jpg");
+  border: 1px solid #000;
+  box-shadow: 0px 0px 19px 0px rgba(0, 0, 0, 0.92);
+}
+
 .required-tags .rating-notrated,
 .required-tags .rating-general-audience,
 .required-tags .rating-explicit,
@@ -1051,16 +1083,12 @@ a.tag:hover,
 .index .mystery .icon,
 .index .tag .icon,
 .index .tagset .icon,
-.abbreviated .icon .visitor,
-.abbreviated .icon .anonymous,
 .admin .primary .icon,
 .tagset .primary .icon,
 .tag .primary .icon,
 a.rss span,
 #symbols-key dl img,
 #bookmark-symbols-key img,
-img[src$="/images/skins/iconsets/default/icon_user.png"],
-img[src$="/images/skins/iconsets/default/icon_collection.png"],
 img[src$="/images/lockblue.png"] {
   background-image: url("https://zerafinacss.github.io/ao3/imageset/bw.png");
   background-size: 200px 835px;
@@ -1151,32 +1179,10 @@ img[src$="/images/skins/iconsets/default/bookmark-hidden.png"] {
   background-position: -150px -50px;
 }
 
-img[src$="/images/skins/iconsets/default/icon_user.png"],
 img[src$="/images/skins/iconsets/default/icon_collection.png"],
 img[src$="/images/lockblue.png"] {
   width: 0 !important;
   height: 0 !important;
-}
-
-img[src$="/images/skins/iconsets/default/icon_user.png"] {
-  padding: 100px 0 0 100px;
-  background-position: 0px -75px;
-}
-
-.index:not(.comment) .abbreviated img[src$="/images/skins/iconsets/default/icon_user.png"] {
-  padding: 75px 0 0 75px;
-  background-position: 0px -375px;
-}
-
-.index:not(.comment) img[src$="/images/skins/iconsets/default/icon_user.png"] {
-  padding: 55px 0 0 55px;
-  background-position: 0px -525px;
-}
-
-#greeting img[src$="/images/skins/iconsets/default/icon_user.png"] {
-  padding: 1.786em 0 0 1.786em;
-  background-position: 0 -19px;
-  background-size: 201% !important;
 }
 
 img[src$="/images/skins/iconsets/default/icon_collection.png"] {
@@ -1192,26 +1198,4 @@ img[src$="/images/skins/iconsets/default/icon_collection.png"] {
 img[src$="/images/lockblue.png"] {
   padding: 15px 0 0 15px;
   background-position: -155px -305px;
-}
-
-.site-skin-metadata {
-  content: "==================================================
-
-  - Skin:         Replace the AO3 Icons - mobile fix
-  - Author:       ZerafinaCSS [https://www.tumblr.com/zerafinacss]
-  - Instructions: https://ao3.org/works/54831748
-  - Repository:   https://github.com/ZerafinaCSS/Replace-the-AO3-Icons
-  - License:      GPL-3.0
-  - Updated:      2026-Mar-08 19:16 UTC (no code changes)
-
-  ==========================================================";
-}
-
-#greeting img[src$="/images/skins/iconsets/default/icon_user.png"] {
-  background-position: 0 -16.5px;
-}
-
-.comment img[src$="/images/skins/iconsets/default/icon_user.png"] {
-  padding: 55px 0 0 55px !important;
-  background-position: 0px -525px !important;
 }
